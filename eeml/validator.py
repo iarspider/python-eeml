@@ -48,9 +48,7 @@ class Version051(object):
     def data(self, data):
         unit = data._unit
         at = data._at
-        id_ = data._id
-
-        _assertPosInt(id_, 'id', True)
+        
         if unit is not None and not isinstance(unit, Unit):
             raise ValueError("unit must be an instance of Unit, got {}"
                              .format(type(unit)))
@@ -59,8 +57,6 @@ class Version051(object):
                              "got {}".format(type(at)))
 
     def datapoints(self, datapoints):
-        id_ = datapoints._id
-
-        _assertPosInt(id_, 'id', True)
-
+        pass
+    
 Validator = Version051
